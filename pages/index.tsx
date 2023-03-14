@@ -26,7 +26,8 @@ const Home: NextPage = () => {
         });
         const data = await response.json();
         setValue('');
-        setCompletion(data.result.choices[0].text);
+        // setCompletion(data.result.choices[0].text);
+        setCompletion(data.result_image.data[0].url);
       }
     }, [value]);
 
@@ -35,7 +36,8 @@ const Home: NextPage = () => {
       <div>Please type your prompt</div>
       <input value={value} onChange={handleInput} onKeyDown={handleKeyDown} />
       <div>Prompt: {prompt}</div>
-      <div>Completion: {completion.split('\n').map(item => <>{item}<br/></>)}</div>
+      {/* <div>Completion: {completion.split('\n').map(item => <>{item}<br/></>)}</div> */}
+      <div>Completion: <img src={completion}/></div>
     </div>
   );
 };

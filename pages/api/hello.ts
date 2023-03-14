@@ -10,14 +10,25 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const completion = await openai.createCompletion({
-    model: 'text-davinci-002',
-    prompt: req.body.text,
-    temperature: 0.7,
-    top_p: 1,
-    frequency_penalty: 0,
-    presence_penalty: 0,
-    max_tokens: 256,
-  });
-  res.status(200).json({ result: completion.data });
+
+    // const completion = await openai.createCompletion({
+    //   model: 'text-davinci-002',
+    //   prompt: req.body.text,
+    //   temperature: 0.7,
+    //   top_p: 1,
+    //   frequency_penalty: 0,
+    //   presence_penalty: 0,
+    //   max_tokens: 256,
+    // });
+    // res.status(200).json({ result: completion.data });
+
+    const response = await openai.createImage({
+      prompt: req.body.text,
+      n: 1,
+      size: "1024x1024",
+    });
+    // image_url = response.data.data[0].url;
+    res.status(200).json({ result_image: response.data });
+
+
 }
