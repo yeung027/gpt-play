@@ -17,7 +17,7 @@ const Home: NextPage = () => {
       if (e.key === 'Enter') {
         setPrompt(value);
         setCompletion('Loading...');
-        const response = await fetch('/api/completion', {
+        const response = await fetch('/api/image', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -26,7 +26,8 @@ const Home: NextPage = () => {
         });
         const data = await response.json();
         setValue('');
-        setCompletion(data.result.choices[0].text);
+        // setCompletion(data.result.choices[0].text);
+        setCompletion(data.result_image.data[0].url);
       }
     }, [value]);
 
@@ -35,7 +36,10 @@ const Home: NextPage = () => {
       <div>Please type your prompt</div>
       <input value={value} onChange={handleInput} onKeyDown={handleKeyDown} />
       <div>Prompt: {prompt}</div>
-      <div>Completion: {completion.split('\n').map(item => <>{item}<br/></>)}</div>
+      {/* <div>Completion: {completion.split('\n').map(item => <>{item}<br/></>)}</div> */}
+      <div>Completion: 
+        {completion && <img src={completion}/>}
+      </div>
     </div>
   );
 };
