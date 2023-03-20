@@ -32,7 +32,7 @@ const Home: NextPage = () => {
 
   return (
     <div className={styles.main}>
-      <div>Please type your prompt</div>
+      <div>Please type your prompt(edited fro iphone)</div>
       <input value={value} onChange={handleInput} onKeyDown={handleKeyDown} />
       <div>Prompt: {prompt}</div>
       <div>Completion: {completion.split('\n').map(item => <>{item}<br/></>)}</div>
