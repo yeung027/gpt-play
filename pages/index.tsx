@@ -31,13 +31,8 @@ const Home: NextPage = () => {
     }, [value]);
 
   return (
-    <div>
-      <Head>
-        <title>Chatroom</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
 
-      <main className="bg-gray-100 min-h-screen flex flex-col items-center justify-center">
+      <div className="bg-gray-100 min-h-screen flex flex-col items-center justify-center">
         <h1 className="text-6xl font-bold mb-8">Chatroom</h1>
 
         <div className="bg-white rounded-lg shadow-lg p-8 w-full max-w-md">
@@ -67,7 +62,6 @@ const Home: NextPage = () => {
             </button>
           </form>
         </div>
-      </main>
     </div>
   );
 };
