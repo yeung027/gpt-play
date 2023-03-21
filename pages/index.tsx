@@ -31,11 +31,43 @@ const Home: NextPage = () => {
     }, [value]);
 
   return (
-    <div className={styles.main}>
-      <div>Please type your prompt(edited fro iphone)</div>
-      <input value={value} onChange={handleInput} onKeyDown={handleKeyDown} />
-      <div>Prompt: {prompt}</div>
-      <div>Completion: {completion.split('\n').map(item => <>{item}<br/></>)}</div>
+    <div>
+      <Head>
+        <title>Chatroom</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
+      <main className="bg-gray-100 min-h-screen flex flex-col items-center justify-center">
+        <h1 className="text-6xl font-bold mb-8">Chatroom</h1>
+
+        <div className="bg-white rounded-lg shadow-lg p-8 w-full max-w-md">
+          <div className="flex items-center mb-4">
+            <span className="bg-green-500 rounded-full h-3 w-3 mr-2"></span>
+            <p className="text-gray-700 font-medium">John Doe</p>
+          </div>
+
+          <div className="flex items-center mb-4">
+            <span className="bg-blue-500 rounded-full h-3 w-3 mr-2"></span>
+            <p className="text-gray-700 font-medium">Jane Doe</p>
+          </div>
+
+          <div className="flex items-center mb-4">
+            <span className="bg-red-500 rounded-full h-3 w-3 mr-2"></span>
+            <p className="text-gray-700 font-medium">Bob Smith</p>
+          </div>
+
+          <form className="flex items-center">
+            <input
+              type="text"
+              className="bg-gray-100 border border-gray-300 rounded-lg py-2 px-4 mr-4 w-full"
+              placeholder="Type your message here..."
+            />
+            <button className="bg-blue-500 text-white font-bold py-2 px-4 rounded-lg">
+              Send
+            </button>
+          </form>
+        </div>
+      </main>
     </div>
   );
 };
