@@ -32,37 +32,48 @@ const Home: NextPage = () => {
 
   return (
 
-      <div className="bg-gray-100 min-h-screen flex flex-col items-center justify-center">
-        <h1 className="text-6xl font-bold mb-8">Chatroom</h1>
-
-        <div className="bg-white rounded-lg shadow-lg p-8 w-full max-w-md">
-          <div className="flex items-center mb-4">
-            <span className="bg-green-500 rounded-full h-3 w-3 mr-2"></span>
-            <p className="text-gray-700 font-medium">John Doe</p>
-          </div>
-
-          <div className="flex items-center mb-4">
-            <span className="bg-blue-500 rounded-full h-3 w-3 mr-2"></span>
-            <p className="text-gray-700 font-medium">Jane Doe</p>
-          </div>
-
-          <div className="flex items-center mb-4">
-            <span className="bg-red-500 rounded-full h-3 w-3 mr-2"></span>
-            <p className="text-gray-700 font-medium">Bob Smith</p>
-          </div>
-
-          <form className="flex items-center">
-            <input
-              type="text"
-              className="bg-gray-100 border border-gray-300 rounded-lg py-2 px-4 mr-4 w-full"
-              placeholder="Type your message here..."
-            />
-            <button className="bg-blue-500 text-white font-bold py-2 px-4 rounded-lg">
-              Send
-            </button>
-          </form>
+      <div className="flex flex-1 flex-col p-8">
+        <div className="flex-1 overflow-y-auto">
+          <ul className="space-y-4">
+            <li>
+              <div className="flex items-center space-x-4">
+                <img
+                  className="w-8 h-8 rounded-full"
+                  src="https://via.placeholder.com/64"
+                  alt="User profile picture"
+                />
+                <div>
+                  <p className="font-bold">John Doe</p>
+                  <p>Hello!</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div className="flex items-center space-x-4">
+                <img
+                  className="w-8 h-8 rounded-full"
+                  src="https://via.placeholder.com/64"
+                  alt="User profile picture"
+                />
+                <div>
+                  <p className="font-bold">Jane Doe</p>
+                  <p>Hi there!</p>
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
-    </div>
+        <div className="flex items-center space-x-4 py-4">
+          <input
+            type="text"
+            className="flex-1 border-gray-400 border-2 py-2 px-4 rounded-lg"
+            placeholder="Type your message..."
+          />
+          <button className="bg-blue-500 text-white py-2 px-4 rounded-lg">
+            Send
+          </button>
+        </div>
+      </div>
   );
 };
 
