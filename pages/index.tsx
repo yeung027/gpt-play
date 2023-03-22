@@ -32,48 +32,220 @@ const Home: NextPage = () => {
 
   return (
 
-      <div className="flex flex-1 flex-col p-8">
-        <div className="flex-1 overflow-y-auto">
-          <ul className="space-y-4">
-            <li>
-              <div className="flex items-center space-x-4">
-                <img
-                  className="w-8 h-8 rounded-full"
-                  src="https://via.placeholder.com/64"
-                  alt="User profile picture"
-                />
-                <div>
-                  <p className="font-bold">John Doe</p>
-                  <p>Hello!</p>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div className="flex items-center space-x-4">
-                <img
-                  className="w-8 h-8 rounded-full"
-                  src="https://via.placeholder.com/64"
-                  alt="User profile picture"
-                />
-                <div>
-                  <p className="font-bold">Jane Doe</p>
-                  <p>Hi there!</p>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div className="flex items-center space-x-4 py-4">
+      
+<div class="container mx-auto shadow-lg rounded-lg">
+        <!-- headaer -->
+    <div class="px-5 py-5 flex justify-between items-center bg-white border-b-2">
+      <div class="font-semibold text-2xl">GoingChat</div>
+      <div class="w-1/2">
+        <input
+          type="text"
+          name=""
+          id=""
+          placeholder="search IRL"
+          class="rounded-2xl bg-gray-100 py-3 px-5 w-full"
+        />
+      </div>
+      <div
+        class="h-12 w-12 p-2 bg-yellow-500 rounded-full text-white font-semibold flex items-center justify-center"
+      >
+        RA
+      </div>
+    </div>
+    <!-- end header -->
+    <!-- Chatting -->
+    <div class="flex flex-row justify-between bg-white">
+      <!-- chat list -->
+      <div class="flex flex-col w-2/5 border-r-2 overflow-y-auto">
+        <!-- search compt -->
+        <div class="border-b-2 py-4 px-2">
           <input
             type="text"
-            className="flex-1 border-gray-400 border-2 py-2 px-4 rounded-lg"
-            placeholder="Type your message..."
+            placeholder="search chatting"
+            class="py-2 px-2 border-2 border-gray-200 rounded-2xl w-full"
           />
-          <button className="bg-blue-500 text-white py-2 px-4 rounded-lg">
-            Send
-          </button>
+        </div>
+        <!-- end search compt -->
+        <!-- user list -->
+        <div
+          class="flex flex-row py-4 px-2 justify-center items-center border-b-2"
+        >
+          <div class="w-1/4">
+            <img
+              src="https://source.unsplash.com/_7LbC5J-jw4/600x600"
+              class="object-cover h-12 w-12 rounded-full"
+              alt=""
+            />
+          </div>
+          <div class="w-full">
+            <div class="text-lg font-semibold">Luis1994</div>
+            <span class="text-gray-500">Pick me at 9:00 Am</span>
+          </div>
+        </div>
+        <div class="flex flex-row py-4 px-2 items-center border-b-2">
+          <div class="w-1/4">
+            <img
+              src="https://source.unsplash.com/otT2199XwI8/600x600"
+              class="object-cover h-12 w-12 rounded-full"
+              alt=""
+            />
+          </div>
+          <div class="w-full">
+            <div class="text-lg font-semibold">Everest Trip 2021</div>
+            <span class="text-gray-500">Hi Sam, Welcome</span>
+          </div>
+        </div>
+        <div
+          class="flex flex-row py-4 px-2 items-center border-b-2 border-l-4 border-blue-400"
+        >
+          <div class="w-1/4">
+            <img
+              src="https://source.unsplash.com/L2cxSuKWbpo/600x600"
+              class="object-cover h-12 w-12 rounded-full"
+              alt=""
+            />
+          </div>
+          <div class="w-full">
+            <div class="text-lg font-semibold">MERN Stack</div>
+            <span class="text-gray-500">Lusi : Thanks Everyone</span>
+          </div>
+        </div>
+        <div class="flex flex-row py-4 px-2 items-center border-b-2">
+          <div class="w-1/4">
+            <img
+              src="https://source.unsplash.com/vpOeXr5wmR4/600x600"
+              class="object-cover h-12 w-12 rounded-full"
+              alt=""
+            />
+          </div>
+          <div class="w-full">
+            <div class="text-lg font-semibold">Javascript Indonesia</div>
+            <span class="text-gray-500">Evan : some one can fix this</span>
+          </div>
+        </div>
+        <div class="flex flex-row py-4 px-2 items-center border-b-2">
+          <div class="w-1/4">
+            <img
+              src="https://source.unsplash.com/vpOeXr5wmR4/600x600"
+              class="object-cover h-12 w-12 rounded-full"
+              alt=""
+            />
+          </div>
+          <div class="w-full">
+            <div class="text-lg font-semibold">Javascript Indonesia</div>
+            <span class="text-gray-500">Evan : some one can fix this</span>
+          </div>
+        </div>
+
+        <div class="flex flex-row py-4 px-2 items-center border-b-2">
+          <div class="w-1/4">
+            <img
+              src="https://source.unsplash.com/vpOeXr5wmR4/600x600"
+              class="object-cover h-12 w-12 rounded-full"
+              alt=""
+            />
+          </div>
+          <div class="w-full">
+            <div class="text-lg font-semibold">Javascript Indonesia</div>
+            <span class="text-gray-500">Evan : some one can fix this</span>
+          </div>
+        </div>
+        <!-- end user list -->
+      </div>
+      <!-- end chat list -->
+      <!-- message -->
+      <div class="w-full px-5 flex flex-col justify-between">
+        <div class="flex flex-col mt-5">
+          <div class="flex justify-end mb-4">
+            <div
+              class="mr-2 py-3 px-4 bg-blue-400 rounded-bl-3xl rounded-tl-3xl rounded-tr-xl text-white"
+            >
+              Welcome to group everyone !
+            </div>
+            <img
+              src="https://source.unsplash.com/vpOeXr5wmR4/600x600"
+              class="object-cover h-8 w-8 rounded-full"
+              alt=""
+            />
+          </div>
+          <div class="flex justify-start mb-4">
+            <img
+              src="https://source.unsplash.com/vpOeXr5wmR4/600x600"
+              class="object-cover h-8 w-8 rounded-full"
+              alt=""
+            />
+            <div
+              class="ml-2 py-3 px-4 bg-gray-400 rounded-br-3xl rounded-tr-3xl rounded-tl-xl text-white"
+            >
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
+              at praesentium, aut ullam delectus odio error sit rem. Architecto
+              nulla doloribus laborum illo rem enim dolor odio saepe,
+              consequatur quas?
+            </div>
+          </div>
+          <div class="flex justify-end mb-4">
+            <div>
+              <div
+                class="mr-2 py-3 px-4 bg-blue-400 rounded-bl-3xl rounded-tl-3xl rounded-tr-xl text-white"
+              >
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Magnam, repudiandae.
+              </div>
+
+              <div
+                class="mt-4 mr-2 py-3 px-4 bg-blue-400 rounded-bl-3xl rounded-tl-3xl rounded-tr-xl text-white"
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Debitis, reiciendis!
+              </div>
+            </div>
+            <img
+              src="https://source.unsplash.com/vpOeXr5wmR4/600x600"
+              class="object-cover h-8 w-8 rounded-full"
+              alt=""
+            />
+          </div>
+          <div class="flex justify-start mb-4">
+            <img
+              src="https://source.unsplash.com/vpOeXr5wmR4/600x600"
+              class="object-cover h-8 w-8 rounded-full"
+              alt=""
+            />
+            <div
+              class="ml-2 py-3 px-4 bg-gray-400 rounded-br-3xl rounded-tr-3xl rounded-tl-xl text-white"
+            >
+              happy holiday guys!
+            </div>
+          </div>
+        </div>
+        <div class="py-5">
+          <input
+            class="w-full bg-gray-300 py-5 px-3 rounded-xl"
+            type="text"
+            placeholder="type your message here..."
+          />
         </div>
       </div>
+      <!-- end message -->
+      <div class="w-2/5 border-l-2 px-5">
+        <div class="flex flex-col">
+          <div class="font-semibold text-xl py-4">Mern Stack Group</div>
+          <img
+            src="https://source.unsplash.com/L2cxSuKWbpo/600x600"
+            class="object-cover rounded-xl h-64"
+            alt=""
+          />
+          <div class="font-semibold py-4">Created 22 Sep 2021</div>
+          <div class="font-light">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt,
+            perspiciatis!
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+  
   );
 };
 
